@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather APP</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4915e073d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="location">
+        <div class="row">
+          <div class="col-6">
+            <form id="search-form">
+              <input type="text" placeholder="Take me to..." id="search-city" />
+              <input type="submit" value="GO!" />
+            </form>
+          </div>
+          <div class="col-6">
+            <p class="text-right">
+              Currently in...
+              <button class="my-location" type="submit" id="my-location">
+                <i class="fas fa-location-arrow"></i>
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="today">
+        <div class="row">
+          <div class="col-4">
+            <h1 class="display-1"></h1>
+            <h2 class="display-4"></h2>
+          </div>
+          <div class="col-4">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="currentTemp" id="current-temp"></div>
+            <div class="btn-group" id="temperature-buttons">
+              <a
+                href="#"
+                class="btn btn-link btn-outline-light"
+                id="celsius-link"
+                >ºC</a
+              >
+              <a
+                href="#"
+                class="btn btn-link btn-outline-light"
+                id="fahrenheit-link"
+                >ºF</a
+              >
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="todayicon">
+              <span id="current-description">It's sunny</span>
+              <img src="images/sun.png" alt="sun" />
+              <span class="current-date" id="current-date"> May 21 2020,</span>
+              <br />
+              <p class="currentTime" id="current-time">19:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!--forecast-->
+
+        <div class="row" id="forecast">
+          <div class="col">
+            Friday
+            <p>22/05</p>
+            <div class="weather-icon"><i class="fas fa-cloud"></i></div>
+
+            <div class="temp">22ºC|<strong>26ºC</strong></div>
+          </div>
+          <div class="col">
+            Saturday
+            <p>23/05</p>
+            <div class="weather-icon"><i class="fas fa-cloud-rain"></i></div>
+
+            <div class="temp">17ºC|<strong>22ºC</strong></div>
+          </div>
+          <div class="col">
+            Sunday
+            <p>24/05</p>
+            <div class="weather-icon"><i class="fas fa-sun"></i></div>
+
+            <div class="temp">20ºC|<strong>26ºC</strong></div>
+          </div>
+
+          <div class="col">
+            Monday
+            <p>25/05</p>
+            <div class="weather-icon"><i class="fas fa-sun"></i></div>
+
+            <div class="temp">22ºC|<strong>28ºC</strong></div>
+          </div>
+          <div class="col">
+            Tueday
+            <p>26/05</p>
+            <div class="weather-icon">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="temp">26ºC|<strong>28ºC</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Coded By
+      <a href="https://pt.linkedin.com/in/anacatarinagarcia">
+        Catarina Garcia</a
+      >
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
