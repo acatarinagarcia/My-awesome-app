@@ -32,7 +32,7 @@ body .container {
 h2 {
   font-style: oblique;
 }
-.location {
+#location {
   margin-top: 25px;
   margin-bottom: 25px;
 }
