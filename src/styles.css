@@ -2,17 +2,16 @@ html,
 body {
   width: 100%;
   height: 100%;
-}
-body {
-  padding: 50px;
-  line-height: normal;
+  font-family: "Domine", serif;
 }
 
-body .container {
+.weather-app {
   display: block;
+  max-width: 700px;
   position: relative;
-  padding: 75px auto;
-  margin-top: 25px;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 5px;
   border-style: solid;
   border-width: thick;
   border-color: #dcd1f2;
@@ -22,15 +21,15 @@ body .container {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.7;
-  font-family: "Balsamiq Sans", cursive;
 }
 
-.col-4 h1 {
-  font-weight: bold;
+h1 {
+  font-size: 70px;
+  line-height: 75px;
 }
 
 h2 {
-  font-style: oblique;
+  font-size: 50px;
 }
 #location {
   margin-top: 25px;
@@ -39,18 +38,19 @@ h2 {
 
 div #temperature-buttons {
   position: relative;
-  top: -200px;
-  margin-left: 200px;
+  font-size: 15px;
+  top: -220px;
+  margin-left: 100px;
   background-color: inherit;
 }
 
 #forecast {
   text-align: center;
-  padding: 50px 20px 50px 20px;
+  padding: 50px 20px 50px 30px;
 }
 
 .currentTemp {
-  font-size: 150px;
+  font-size: 120px;
   font-weight: bolder;
 }
 img {
@@ -82,6 +82,5 @@ img {
 
 footer {
   text-align: center;
-  padding: 25px 50px;
   font-size: small;
 }

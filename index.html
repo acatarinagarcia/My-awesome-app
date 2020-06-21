@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather APP</title>
-    <link rel="stylesheet" href="src/styles.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
@@ -17,59 +16,63 @@
       crossorigin="anonymous"
     ></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Domine&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
     <div class="container">
-      <div class="row" id="location">
-        <div class="col-6">
-          <form id="search-form">
-            <input type="text" placeholder="Take me to..." id="search-city" />
-            <input type="submit" value="GO!" />
-          </form>
+      <div class="weather-app">
+        <div class="row" id="location">
+          <div class="col-6">
+            <form id="search-form">
+              <input type="text" placeholder="Take me to..." id="search-city" />
+              <input type="submit" value="GO!" />
+            </form>
+          </div>
+          <div class="col-6">
+            <p class="text-right">
+              Currently in...
+              <button class="my-location" type="submit" id="my-location">
+                <i class="fas fa-location-arrow"></i>
+              </button>
+            </p>
+          </div>
         </div>
-        <div class="col-6">
-          <p class="text-right">
-            Currently in...
-            <button class="my-location" type="submit" id="my-location">
-              <i class="fas fa-location-arrow"></i>
-            </button>
-          </p>
-        </div>
-      </div>
 
-      <div class="today">
-        <div class="row">
+        <div class="row" id="now-forecast">
           <div class="col-4">
-            <h1 class="display-1"></h1>
-            <h2 class="display-4"></h2>
+            <h1></h1>
+            <h2></h2>
           </div>
           <div class="col-4">
-            <br />
-            <br />
-            <br />
-            <br />
-            <div class="currentTemp" id="current-temp"></div>
-            <div class="btn-group" id="temperature-buttons">
-              <a
-                href="#"
-                class="btn btn-link btn-outline-light"
-                id="celsius-link"
-                >ºC</a
-              >
-              <a
-                href="#"
-                class="btn btn-link btn-outline-light"
-                id="fahrenheit-link"
-                >ºF</a
-              >
+            <div class="clearfix">
+              <br />
+              <br />
+              <br />
+              <br />
+              <div class="currentTemp" id="current-temp"></div>
+              <div class="btn-group" id="temperature-buttons">
+                <a
+                  href="#"
+                  class="btn btn-link btn-outline-light"
+                  id="celsius-link"
+                  >ºC</a
+                >
+                <a
+                  href="#"
+                  class="btn btn-link btn-outline-light"
+                  id="fahrenheit-link"
+                  >ºF</a
+                >
+              </div>
             </div>
           </div>
           <div class="col-4">
             <div class="todayicon">
-              <span id="current-description">It's sunny</span>
+              <br />
+              <span id="current-description"></span>
               <img src="images/sun.png" alt="sun" />
               <span class="current-date" id="current-date"> May 21 2020,</span>
               <br />
@@ -120,20 +123,20 @@
           </div>
         </div>
       </div>
+      <footer>
+        This project was coded by
+        <a href="https://pt.linkedin.com/in/anacatarinagarcia" target="_blank">
+          Catarina Garcia</a
+        >
+        and is
+        <a
+          href="https://github.com/acatarinagarcia/My-awesome-app"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+      </footer>
     </div>
 
-    <footer>
-      This project was coded by
-      <a href="https://pt.linkedin.com/in/anacatarinagarcia">
-        Catarina Garcia</a
-      >
-      and is
-      <a href="https://github.com/acatarinagarcia/My-awesome-app"
-        >open-sourced on GitHub</a
-      >
-      and hosted on
-      <a href="https://mystifying-kilby-de9c2f.netlify.app">Netlify</a>
-    </footer>
     <script src="index.js"></script>
   </body>
 </html>
