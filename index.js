@@ -1,50 +1,52 @@
-//Set Time
+//Matts resolution
 
-let now = new Date();
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
 
-let currentDate = document.querySelector("#current-date");
-let currentTime = document.querySelector("#current-time");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let months = [
+    "Jan",
+    "Feb",
+    "March",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  let year = date.getFullYear();
+  let month = months[date.getMonth()];
+  let day = days[date.getDay()];
+  let actualDay = date.getDate();
 
-let date = now.getDate();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+  return `${day} ${actualDay} ${month} ${year}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
+
+function formatHours(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${hours}:${minutes}`;
 }
-let year = now.getFullYear();
-
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let day = days[now.getDay()];
-
-let months = [
-  "Jan",
-  "Feb",
-  "March",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let month = months[now.getMonth()];
-currentDate.innerHTML = `${day} ${month} ${date}, ${year}`;
-currentTime.innerHTML = `${hours}:${minutes}`;
 
 // Button Convert Temperatures: Celsius to Fahrenheit
 function choosecelsius(event) {
@@ -73,14 +75,17 @@ function showWheather(response) {
   let descriptionElement = document.querySelector("#current-description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#current-date");
+  let hourElement = document.querySelector("#current-time");
   degreesNowElement.innerHTML = Math.round(response.data.main.temp);
   currentCityElement.innerHTML = response.data.name;
   countryElement.innerHTML = response.data.sys.country;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = Math.round(response.data.main.humidity);
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  hourElement.innerHTML = formatHours(response.data.dt * 1000);
 }
-
 // Set City
 function searchCity(city) {
   let apiKey = "994cfaf2a113ce08ce060fdaaac64122";
