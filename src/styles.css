@@ -5,6 +5,38 @@ body {
   font-family: "Domine", serif;
 }
 
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  text-align: center;
+  font-size: small;
+}
+
 .weather-app {
   display: block;
   color: black;
@@ -23,40 +55,32 @@ body {
   opacity: 0.7;
 }
 
-h1 {
-  font-size: 70px;
-  line-height: 75px;
-}
-
-h2 {
-  font-size: 50px;
-}
 #location {
   margin-top: 20px;
   margin-bottom: 25px;
 }
 
 #forecast {
-  text-align: center;
   padding: 20px 20px 20px 20px;
 }
 
+#forecast .col {
+  border-color: #e0e0f7;
+  border-style: solid;
+  border-radius: 4px;
+  box-shadow: 0 8px 6px -6px black;
+  text-align: center;
+}
 #current-temp {
   font-size: 120px;
   font-weight: bolder;
   text-align: center;
 }
-img {
-  display: block;
-  width: 75%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 .todayicon {
   text-align: center;
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .weather-icon {
@@ -66,14 +90,11 @@ img {
 .temp {
   font-size: 15px;
 }
-#forecast .col {
-  border-color: #e0e0f7;
-  border-style: solid;
-  border-radius: 4px;
-  box-shadow: 0 8px 6px -6px black;
+
+li::first-letter {
+  text-transform: capitalize;
 }
 
-footer {
-  text-align: center;
-  font-size: small;
+#current-description {
+  text-transform: capitalize;
 }

@@ -67,15 +67,18 @@ celsiusnow.addEventListener("click", choosecelsius);
 
 //Current City Temperature
 function showWheather(response) {
-  let degreesNow = document.querySelector("#current-temp");
-  let currentCity = document.querySelector("h1");
-  let country = document.querySelector("h2");
-  let description = document.querySelector("#current-description");
-  let temperature = Math.round(response.data.main.temp);
-  degreesNow.innerHTML = `${temperature}`;
-  currentCity.innerHTML = `${response.data.name}`;
-  country.innerHTML = `${response.data.sys.country}`;
-  description.innerHTML = `${response.data.weather[0].description}`;
+  let degreesNowElement = document.querySelector("#current-temp");
+  let currentCityElement = document.querySelector("h1");
+  let countryElement = document.querySelector("h2");
+  let descriptionElement = document.querySelector("#current-description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  degreesNowElement.innerHTML = Math.round(response.data.main.temp);
+  currentCityElement.innerHTML = response.data.name;
+  countryElement.innerHTML = response.data.sys.country;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = Math.round(response.data.main.humidity);
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 // Set City
