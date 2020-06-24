@@ -25,13 +25,17 @@
     <div class="container">
       <div class="weather-app">
         <div class="row" id="location">
-          <div class="col-6">
+          <div class="col">
+            <button class="btn btn-dark" id="celsius-link">ºC</button>
+            <button class="btn btn-dark" id="fahrenheit-link">ºF</button>
+          </div>
+          <div class="col-5">
             <form id="search-form">
               <input type="text" placeholder="Take me to..." id="search-city" />
               <input type="submit" value="GO!" />
             </form>
           </div>
-          <div class="col-6">
+          <div class="col">
             <p class="text-right">
               Currently in...
               <button class="my-location" type="submit" id="my-location">
@@ -42,34 +46,12 @@
         </div>
 
         <div class="row" id="now-forecast">
-          <div class="col-4">
+          <div class="col-4 align-self-start">
             <h1></h1>
             <h2></h2>
           </div>
-          <div class="col-4">
-            <div class="clearfix">
-              <br />
-              <br />
-              <br />
-              <br />
-              <div class="currentTemp" id="current-temp"></div>
-              <div class="btn-group" id="temperature-buttons">
-                <a
-                  href="#"
-                  class="btn btn-link btn-outline-light"
-                  id="celsius-link"
-                  >ºC</a
-                >
-                <a
-                  href="#"
-                  class="btn btn-link btn-outline-light"
-                  id="fahrenheit-link"
-                  >ºF</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
+          <div class="col-4 align-self-center" id="current-temp">50</div>
+          <div class="col-4 align-self-end">
             <div class="todayicon">
               <br />
               <span id="current-description"></span>
@@ -80,7 +62,6 @@
             </div>
           </div>
         </div>
-
         <!--forecast-->
 
         <div class="row" id="forecast">

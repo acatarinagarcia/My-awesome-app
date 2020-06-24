@@ -7,15 +7,15 @@ body {
 
 .weather-app {
   display: block;
+  color: black;
   max-width: 700px;
   position: relative;
   padding: 20px;
   margin: 30px auto;
-  border-radius: 5px;
+  border-radius: 10px;
   border-style: solid;
   border-width: thick;
-  border-color: #dcd1f2;
-  box-shadow: 0 0 10px;
+  border-color: black;
   background-image: url(../images/background.jpg);
   background-position: center;
   background-size: cover;
@@ -32,26 +32,19 @@ h2 {
   font-size: 50px;
 }
 #location {
-  margin-top: 25px;
+  margin-top: 20px;
   margin-bottom: 25px;
-}
-
-div #temperature-buttons {
-  position: relative;
-  font-size: 15px;
-  top: -220px;
-  margin-left: 100px;
-  background-color: inherit;
 }
 
 #forecast {
   text-align: center;
-  padding: 50px 20px 50px 30px;
+  padding: 20px 20px 20px 20px;
 }
 
-.currentTemp {
+#current-temp {
   font-size: 120px;
   font-weight: bolder;
+  text-align: center;
 }
 img {
   display: block;
@@ -73,7 +66,7 @@ img {
 .temp {
   font-size: 15px;
 }
-.col {
+#forecast .col {
   border-color: #e0e0f7;
   border-style: solid;
   border-radius: 4px;
