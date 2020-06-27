@@ -99,3 +99,12 @@ li::first-letter {
 #current-description {
   text-shadow: 2px 2px 20px black;
 }
+
+.weather-app .active {
+  color: black;
+  cursor: default;
+}
+
+.weather-app .active:hover {
+  text-decoration: none;
+}

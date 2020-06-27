@@ -26,12 +26,20 @@
       <div class="weather-app">
         <div class="row" id="location">
           <div class="col">
-            <button class="btn btn-dark" id="celsius-link">ºC</button>
-            <button class="btn btn-dark" id="fahrenheit-link">ºF</button>
+            <a href="#" class="btn btn-dark active" id="celsius-link">
+              ºC
+            </a>
+            <a href="#" class="btn btn-dark" id="fahrenheit-link">
+              ºF
+            </a>
           </div>
           <div class="col-5">
             <form id="search-form">
-              <input type="text" placeholder="Take me to..." id="search-city" />
+              <input
+                type="search"
+                placeholder="Take me to..."
+                id="search-city"
+              />
               <input type="submit" value="GO!" />
             </form>
           </div>
@@ -54,7 +62,7 @@
               <li>Wind: <span id="wind"></span> km/h</li>
             </ul>
           </div>
-          <div class="col-4 align-self-center" id="current-temp">50</div>
+          <div class="col-4 align-self-center" id="current-temp"></div>
           <div class="col-4 align-self-end">
             <div class="todayicon">
               <span class="current-date" id="current-date"></span>
