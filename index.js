@@ -77,6 +77,7 @@ function showWheather(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#current-date");
   let hourElement = document.querySelector("#current-time");
+  let iconElement = document.querySelector("#icon");
   degreesNowElement.innerHTML = Math.round(response.data.main.temp);
   currentCityElement.innerHTML = response.data.name;
   countryElement.innerHTML = response.data.sys.country;
@@ -85,6 +86,11 @@ function showWheather(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   hourElement.innerHTML = formatHours(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 // Set City
 function searchCity(city) {
