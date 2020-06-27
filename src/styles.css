@@ -84,12 +84,27 @@ footer {
   text-transform: capitalize;
 }
 
+.todayicon #current-time {
+  font-size: 18px;
+  font-weight: bolder;
+  line-height: 30px;
+}
 .weather-icon {
   font-size: 50px;
   text-align: center;
 }
+
+#forecast-banner {
+  font-size: 20px;
+  text-decoration-line: underline;
+}
 .temp {
   font-size: 15px;
+}
+
+.weather-forecast span {
+  font-size: 18px;
+  font-weight: bolder;
 }
 
 li::first-letter {
