@@ -83,7 +83,8 @@ function displayForecast(response) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
     <div class="col">
-            <span>
+            <
+            >
             ${formatHours(forecast.dt * 1000)}
             </span>
    <img
